@@ -7,7 +7,6 @@ module.exports = {
     },
     extend: {},
     colors: {
-      'craiqo-orange': '#ffb76f',
       'craiqo-blue': '#1E5E96',
     },
   },

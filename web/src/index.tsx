@@ -1,4 +1,4 @@
-import { ColorModeScript } from '@chakra-ui/react'
+import { ColorModeScript, ChakraProvider } from '@chakra-ui/react'
 import React, { Suspense } from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
@@ -9,11 +9,13 @@ import { Navbar } from './components/Navbar'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Suspense fallback={<div>Loading...</div>}>
+    <ChakraProvider>
       <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-      <Navbar />
-      <PageRoutes />
-    </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Navbar />
+        <PageRoutes />
+      </Suspense>
+    </ChakraProvider>
   </React.StrictMode>,
   document.getElementById('root'),
 )
