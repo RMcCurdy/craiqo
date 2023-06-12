@@ -12,8 +12,10 @@ ReactDOM.render(
     <ChakraProvider>
       <ColorModeScript initialColorMode={theme.config.initialColorMode} />
       <Suspense fallback={<div>Loading...</div>}>
-        <Navbar />
-        <PageRoutes />
+        <div className="h-screen font-craiqo">
+          <Navbar />
+          <PageRoutes />
+        </div>
       </Suspense>
     </ChakraProvider>
   </React.StrictMode>,

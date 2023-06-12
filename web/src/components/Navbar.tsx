@@ -16,10 +16,10 @@ export const Navbar = () => {
         />
         <div>
           <div className="flex items-center">
-            <p className="px-3 py-1 transition-colors font-craiqo hover:text-craiqo-blue hover:cursor-pointer">
+            <p className="px-3 py-1 transition-colors hover:text-craiqo-blue hover:cursor-pointer">
               Planner
             </p>
-            <p className="px-3 py-1 transition-colors font-craiqo hover:text-craiqo-blue hover:cursor-pointer">
+            <p className="px-3 py-1 transition-colors hover:text-craiqo-blue hover:cursor-pointer">
               About
             </p>
             <button
