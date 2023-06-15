@@ -6,15 +6,17 @@ import theme from './theme'
 
 import { PageRoutes } from './routes/PageRoutes'
 import { Navbar } from './components/Navbar'
+import { Footer } from './components/Footer'
 
 ReactDOM.render(
   <React.StrictMode>
     <ChakraProvider>
       <ColorModeScript initialColorMode={theme.config.initialColorMode} />
       <Suspense fallback={<div>Loading...</div>}>
-        <div className="h-screen font-craiqo">
+        <div className="font-craiqo">
           <Navbar />
           <PageRoutes />
+          <Footer />
         </div>
       </Suspense>
     </ChakraProvider>

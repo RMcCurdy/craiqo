@@ -1,19 +1,25 @@
 import skylineBlue from '../images/skyline.svg'
-import { useColorModeValue, useColorMode } from '@chakra-ui/system'
+import { useColorMode } from '@chakra-ui/system'
+import { Button } from '@chakra-ui/button'
 
 export const Landing = () => {
   const { colorMode } = useColorMode()
-  const bg = useColorModeValue('#000', '#000')
+
   return (
-    <div className="h-full">
-      <button className={`bg-[${bg}] py-2 px-4`}>Start planning!</button>
+    <div>
+      <div className="mt-4 mb-10 text-center width-layout">
+        <div className="mb-4 text-2xl lg:mb-8 md:text-3xl lg:text-4xl">
+          Get where you wanna go!
+        </div>
+        <Button fontWeight="normal">Start planning</Button>
+      </div>
       <img
         className="w-full hover:cursor-pointer"
         src={skylineBlue}
         alt="Skyline"
       />
       <div
-        className="h-full"
+        className="min-h-[80vh]"
         style={{
           backgroundImage:
             colorMode === 'light'
