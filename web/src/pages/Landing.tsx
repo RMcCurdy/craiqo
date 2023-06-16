@@ -6,7 +6,7 @@ export const Landing = () => {
   const { colorMode } = useColorMode()
 
   return (
-    <div>
+    <div className="flex flex-col h-full">
       <div className="mt-4 mb-10 text-center width-layout">
         <div className="mb-4 text-2xl lg:mb-8 md:text-3xl lg:text-4xl">
           Get where you wanna go!
@@ -19,7 +19,7 @@ export const Landing = () => {
         alt="Skyline"
       />
       <div
-        className="min-h-[80vh]"
+        className="flex-grow"
         style={{
           backgroundImage:
             colorMode === 'light'
@@ -27,7 +27,7 @@ export const Landing = () => {
               : 'linear-gradient(to bottom, #1E5E96, #1A202C)',
         }}
       >
-        {/* Content of the div */}
+        <div className="pt-16 width-layout">hi</div>
       </div>
     </div>
   )

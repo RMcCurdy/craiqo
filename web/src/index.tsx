@@ -13,10 +13,16 @@ ReactDOM.render(
     <ChakraProvider>
       <ColorModeScript initialColorMode={theme.config.initialColorMode} />
       <Suspense fallback={<div>Loading...</div>}>
-        <div className="font-craiqo">
-          <Navbar />
-          <PageRoutes />
-          <Footer />
+        <div className="flex flex-col min-h-screen font-craiqo">
+          <header>
+            <Navbar />
+          </header>
+          <main className="flex-grow">
+            <PageRoutes />
+          </main>
+          <footer>
+            <Footer />
+          </footer>
         </div>
       </Suspense>
     </ChakraProvider>

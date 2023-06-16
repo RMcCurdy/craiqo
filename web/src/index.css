@@ -13,10 +13,17 @@
   font-style: normal;
 }
 
-html {
-  box-sizing: border-box;
+html,
+body,
+#root {
   font-size: 16px;
   height: 100%;
+}
+
+/* Use flexbox to create a column layout */
+#root {
+  display: flex;
+  flex-direction: column;
 }
 
 body,
