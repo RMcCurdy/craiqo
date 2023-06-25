@@ -10,11 +10,13 @@ import {
   MenuDivider,
 } from '@chakra-ui/menu'
 import { IconButton, useMediaQuery } from '@chakra-ui/react'
+import { useNavigate } from 'react-router-dom'
 
 export const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode()
   const bg = useColorModeValue('#000', '#011627')
   const [isMobile] = useMediaQuery('(max-width: 768px)')
+  const navigate = useNavigate()
 
   return (
     <div className={`width-layout mt-2 bg-[${bg}] transition-colors`}>
@@ -33,8 +35,18 @@ export const Navbar = () => {
               variant="outline"
             />
             <MenuList>
-              <MenuItem icon={<BiTrip size="1.5rem" />}>Planner</MenuItem>
-              <MenuItem icon={<BiQuestionMark size="1.5rem" />}>About</MenuItem>
+              <MenuItem
+                onClick={() => navigate('/planner')}
+                icon={<BiTrip size="1.5rem" />}
+              >
+                Planner
+              </MenuItem>
+              <MenuItem
+                onClick={() => navigate('/about')}
+                icon={<BiQuestionMark size="1.5rem" />}
+              >
+                About
+              </MenuItem>
               <MenuDivider />
               <MenuItem
                 icon={
@@ -60,10 +72,16 @@ export const Navbar = () => {
           />
           <div>
             <div className="flex items-center">
-              <p className="px-3 py-1 transition-colors hover:text-craiqo-blue hover:cursor-pointer">
+              <p
+                onClick={() => navigate('/planner')}
+                className="px-3 py-1 transition-colors hover:text-craiqo-blue hover:cursor-pointer"
+              >
                 Planner
               </p>
-              <p className="px-3 py-1 transition-colors hover:text-craiqo-blue hover:cursor-pointer">
+              <p
+                onClick={() => navigate('/about')}
+                className="px-3 py-1 transition-colors hover:text-craiqo-blue hover:cursor-pointer"
+              >
                 About
               </p>
               <button

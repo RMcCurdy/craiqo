@@ -5,25 +5,14 @@ import './index.css'
 import theme from './theme'
 
 import { PageRoutes } from './routes/PageRoutes'
-import { Navbar } from './components/Navbar'
-import { Footer } from './components/Footer'
+import { Fallback } from './components/Fallback'
 
 ReactDOM.render(
   <React.StrictMode>
     <ChakraProvider>
       <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-      <Suspense fallback={<div>Loading...</div>}>
-        <div className="flex flex-col min-h-screen font-craiqo">
-          <header>
-            <Navbar />
-          </header>
-          <main className="flex-grow">
-            <PageRoutes />
-          </main>
-          <footer>
-            <Footer />
-          </footer>
-        </div>
+      <Suspense fallback={<Fallback />}>
+        <PageRoutes />
       </Suspense>
     </ChakraProvider>
   </React.StrictMode>,

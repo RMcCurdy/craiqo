@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .width-layout {
-  @apply lg:w-[70%] mx-auto px-8;
+  @apply lg:w-[70%] 2xl:w-[60%] mx-auto px-8;
 }
 
 @font-face {

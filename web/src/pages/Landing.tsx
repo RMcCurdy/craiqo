@@ -1,9 +1,11 @@
 import skylineBlue from '../images/skyline.svg'
 import { useColorMode } from '@chakra-ui/system'
 import { Button } from '@chakra-ui/button'
+import { useNavigate } from 'react-router-dom'
 
 export const Landing = () => {
   const { colorMode } = useColorMode()
+  const navigate = useNavigate()
 
   return (
     <div className="flex flex-col h-full">
@@ -11,7 +13,9 @@ export const Landing = () => {
         <div className="mb-4 text-2xl lg:mb-8 md:text-3xl lg:text-4xl">
           Get where you wanna go!
         </div>
-        <Button fontWeight="normal">Start planning</Button>
+        <Button onClick={() => navigate('/planner')} fontWeight="normal">
+          Start planning
+        </Button>
       </div>
       <img
         className="w-full hover:cursor-pointer"
